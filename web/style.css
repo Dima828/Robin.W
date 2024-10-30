@@ -11,8 +11,8 @@ html{
     font-family: var(--font-family);
     background-color: var(--color-dark);
     color: var(--color-white);
-    overflow-x: hidden;
     min-width: 360px;
+    overflow-x: hidden;
 }
 
 :root{
@@ -143,14 +143,74 @@ ol{
     content: "";
     position: absolute;
     z-index: 1;
-    top: -90px;
+    top: -78px;
     bottom: 0;
     left: 38%;
     right: 0;
     background-color: var(--color-dark-grey-alt);
 }
 
-@media (max-width: 1400px){
+/* Experience */
+
+.experience__inner{
+    padding-block: 120px;
+}
+
+.exexperience__tilte{
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light-grey);
+    line-height: 150%;
+    margin-bottom: 8px;
+}
+
+.experience__subtitle{
+    font-size: clamp(32px, 3.82vw, 55px);
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.company__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.number__company{
+    font-size: 117px;
+    color: var(--color-light-grey);
+    font-weight: 400;
+    padding-block: 20px;
+}
+
+.company__name{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 32px;
+}
+
+.company__desc{
+    font-size: 16px;
+    color: var(--color-light-grey);
+    line-height: 150%;
+}
+
+.company__google{
+    color: var(--color-green-accent);
+}
+
+.company__facebook{
+    color: var(--color-blue-accent);
+}
+
+.company__dribbble{
+    color: var(--color-pink-accent);
+}
+
+@media screen and (max-width: 1400px){
+    body{
+        padding-inline: 20px;
+    }
     .top::after{
         background-color: transparent;
         height: 0;
@@ -163,10 +223,7 @@ ol{
     }
 }
 
-@media (max-width: 980px){
-    body{
-        padding-inline: 20px;
-    }
+@media screen and (max-width: 960px){
     .hero__inner{
         row-gap: 10px;
         flex-direction: column;
@@ -179,9 +236,13 @@ ol{
     .hero__body{
         right: 0;
     }
+
+    .company__list{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 650px){
+@media screen and (max-width: 650px){
     .header{
         padding-top: 20px;
     }
@@ -198,5 +259,9 @@ ol{
 
     .list__item{
         height: 30px;
+    }
+
+    .company__list{
+        grid-template-columns: repeat(1, 1fr);
     }
 }
