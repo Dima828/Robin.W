@@ -56,6 +56,31 @@ ol{
     margin: 0 auto;
 }
 
+.link{
+    position: relative;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--color-dark-grey-alt);
+    text-decoration: none;
+    padding-bottom: 4px;
+    transition: var(--transition);
+}
+
+.link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-light-grey);
+}
+
+.link:hover{
+    color: var(--color-light-grey);
+}
+
+
 /* Header */
 
 .top{
@@ -207,6 +232,91 @@ ol{
     color: var(--color-pink-accent);
 }
 
+/* Philosophy */
+
+.philosophy{
+    background-color: var(--color-peach-accent);
+    color: var(--color-dark-grey-alt);
+}
+
+.philosophy__inner{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.philosophy__content{
+    padding: 120px 70px;
+    align-items: center;
+}
+
+.philosophy__title{
+    font-size: clamp(32px, 3.82vw, 55px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.philosophy__desc{
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-dark-grey);
+    margin-bottom: 134px;
+}
+
+.philosophy__spere{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Skillset */
+
+.skillset p{
+    color: var(--color-light-grey);
+}
+
+.skillset__inner{
+    padding-block: 120px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 72px;
+}
+
+.skillset__items{
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 72px;
+}
+
+.skillset__title{
+    font-size: clamp(32px, 3.81vw, 55px);
+    margin-bottom: 24px;
+}
+
+.skillset__desc{
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.design{
+    margin-bottom: 24px;
+}
+
+.skillset__item-title{
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 150%;
+    margin-bottom: 12px;
+}
+
+.skillset__desc{
+    font-size: 16px;
+    line-height: 150%;
+}
+
 @media screen and (max-width: 1400px){
     body{
         padding-inline: 20px;
@@ -240,6 +350,37 @@ ol{
     .company__list{
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .philosophy__inner{
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy__content{
+        padding: 40px 20px;
+    }
+
+    .philosophy__desc{
+        margin-bottom: 90px;
+    }
+
+    .skillset__inner{
+        column-gap: 40px;
+    }
+
+    .skillset__items{
+        gap: 30px 40px;
+    }
+}
+@media screen and (max-width: 765px) {
+    .skillset__inner{
+        padding-block: 60px;
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+
+    .skillset__items{
+        grid-column: 1 / 2;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -263,5 +404,11 @@ ol{
 
     .company__list{
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skillset__items{
+        grid-template-columns: 1fr;
     }
 }
