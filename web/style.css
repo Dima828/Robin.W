@@ -556,6 +556,57 @@ ol{
     color: var(--color-dark-grey);
 }
 
+/* Photodraphy */
+
+.photodraphy{
+    padding-block: 120px;
+}
+
+.photodraphy__title{
+    font-size: clamp(32px, 3.82vw, 55px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.photodraphy__desc{
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-light-grey);
+    margin-bottom: 64px;
+}
+
+.photodraphy__menu{
+    display: flex;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.photodraphy__button{
+    border: var(--border-button);
+    background: transparent;
+    color: var(--color-white);
+    padding: 12px 16px;
+    transition: var(--transition);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.photodraphy__button:hover{
+    background-color: var(--color-purple);
+}
+
+.photodraphys__menu{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 24px;
+}
+
+.photodraphy__image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 @media screen and (max-width: 1400px){
     body{
@@ -637,6 +688,15 @@ ol{
         display: inline-block;
         margin-bottom: 64px;
     }
+
+    .photodraphys__menu{
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+    }
+
+    .photodraphy{
+        padding-block: 20px;
+    }
 }
 @media screen and (max-width: 765px) {
     .skillset__inner{
@@ -696,10 +756,23 @@ ol{
     .swipper__inner{
         padding-inline: 20px;
     }
+    .photodraphy__menu{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photodraphy__button{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .skillset__items{
         grid-template-columns: 1fr;
+    }
+
+    .photodraphys__menu{
+        grid-template-columns: 1fr;
+        row-gap: 24px;
     }
 }
