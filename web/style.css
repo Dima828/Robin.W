@@ -608,6 +608,70 @@ ol{
     object-fit: cover;
 }
 
+/* Contact */
+
+.contact{
+    padding-block: 120px;
+}
+
+.contact__inner{
+    max-width: 1076px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.content__title{
+    font-size: clamp(32px, 3.82vw, 55px);
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.content__desc{
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--color-light-grey);
+}
+
+.contact__form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact__form label{
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 8px;
+}
+
+.input__field{
+    min-height: 50px;
+    margin-bottom: 40px;
+    background-color: var(--color-dark-grey-alt);
+    border: none;
+}
+
+.contact__form textarea {
+    min-height: 100px;
+    max-height: 500px;
+    resize: none;
+    border: none;
+    padding: 24px 24px;
+    margin-bottom: 40px;
+    background-color: var(--color-dark-grey-alt);
+}
+
+.contact__button{
+    width: 100%;
+    min-height: 75px;
+    background-color: var(--color-purple);
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 700;
+    color: var(--color-white);
+    text-transform: uppercase;
+}
+
 @media screen and (max-width: 1400px){
     body{
         padding-inline: 20px;
@@ -763,6 +827,11 @@ ol{
 
     .photodraphy__button{
         width: 100%;
+    }
+
+    .contact__inner{
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
